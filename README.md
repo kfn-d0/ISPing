@@ -16,6 +16,9 @@
 
    O ISPing foi pensado para técnicos, analistas e provedores que precisam de informações de rede em tempo real, de forma prática e discreta, sem a necessidade de abrir ferramentas complexas.
 
+   O programa foi inspirado em outro programa chamado [PingoMeter](https://github.com/EFLFE/PingoMeter), porém essa versão é mais voltada a ISPs.
+
+
    ### Obs: O programa precisa do .NET 9.0 (https://dotnet.microsoft.com/en-us/download)
 
 
