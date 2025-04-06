@@ -1,5 +1,11 @@
 #  **ISPing – Monitoramento de Latência e Ferramentas para ISPs**
 
+![image](https://github.com/user-attachments/assets/b7b0bd79-9929-4ec0-8a35-65e68dc3d53d)
+
+![image](https://github.com/user-attachments/assets/de0f52ae-ef1b-4361-96af-e02b2aa441f3)
+
+
+
    O ISPing é uma ferramenta leve e prática desenvolvida para exibir a latência de rede diretamente na barra de tarefas do Windows (Taskbar), em formato numérico com simples indicador com cor, oferecendo uma visão rápida e contínua da qualidade da conexão.
 
    Além do monitoramento básico de ping, o ISPing conta com funcionalidades extras voltadas especialmente para provedores de internet (ISPs), como:
