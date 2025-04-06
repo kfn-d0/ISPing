@@ -30,9 +30,11 @@
 
 
   Iniciar com Windows:
-
+  
    Aperte Botão Windows + R
+   
    Escreva na caixa: shell:startup
+    
    Cole o arquivo ISPing.exe
 
 ![image](https://github.com/user-attachments/assets/ead2bdaa-9fc6-4d96-a8d2-927e04e8f2bb)
