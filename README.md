@@ -6,30 +6,160 @@
 
 
 
-   O ISPing é uma ferramenta leve e prática desenvolvida para exibir a latência de rede diretamente na barra de tarefas do Windows (Taskbar), em formato numérico com simples indicador com cor, oferecendo uma visão rápida e contínua da qualidade da conexão.
+# ISPing
 
-   Além do monitoramento básico de ping, o ISPing conta com funcionalidades extras voltadas especialmente para provedores de internet (ISPs), como:
+**Monitor de rede em tempo real para Windows** — Monitore latência, velocidade de rede, mudanças de IP e muito mais diretamente na bandeja do sistema.
 
-   Detecção automática de IPs para ping – o programa identifica IPs na area de colagem para ping rápido afim de consultar latência/disponibilidade.
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
+![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4?style=flat&logo=dotnet&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-   Traceroute Inteligente – executa automaticamente um traceroute a cada 2 minutos quando ativado, comparando rotas anteriores para identificar alterações de rota, o que pode ajudar a detectar instabilidades ou reroteamentos.
+---
 
-   Ping personalizável – permite configurar o URL/IP personalizado para testes de latência, adaptando-se à suas necessidades.
+## Visão Geral
 
-   Verificação de DNS – ao abrir o programa o seu DNS atual é exibido.
-
-   Exibição flexível de pings – além da exibição contínua na taskbar, o programa oferece uma opção com janela flutuante temporária com os resultados de pings, ideal para diagnósticos rápidos.
-
-   O ISPing foi pensado para técnicos, analistas e provedores que precisam de informações de rede em tempo real, de forma prática e discreta, sem a necessidade de abrir ferramentas complexas.
-
-   O programa foi inspirado em outro programa chamado [PingoMeter](https://github.com/EFLFE/PingoMeter), porém essa versão é mais voltada a ISPs.
+O **ISPing** é uma aplicação leve que reside na bandeja do sistema (system tray) do Windows e fornece monitoramento contínuo da sua conexão de rede. 
+ 
+O ícone da bandeja exibe a latência atual em tempo real, com cores indicando a qualidade da conexão.
 
 
-   ### Obs: O programa precisa do .NET 9.0 (https://dotnet.microsoft.com/en-us/download)
+---
+
+## Funcionalidades
+
+### Monitoramento de Ping
+
+- **Ping ICMP ou TCP** — Escolha entre ping ICMP tradicional ou TCP para alvos que bloqueiam ICMP
+- **Alvos pré-configurados** — Google (8.8.8.8), Cloudflare (1.1.1.1) ou endereço personalizado
+- **Intervalos configuráveis** — 1, 3 ou 10 segundos entre pings
+- **Exibição no ícone** — Mostra último ping ou média dos últimos 3 pings
+
+### Latency Hound
+
+Sistema inteligente de detecção de variações de latência:
+
+- **Detecção automática** — Monitora variações significativas na latência
+- **Tracert automático** — Executa traceroute quando detecta mudanças
+- **Histórico** — Armazena e exibe histórico de tracerts
+- **Configurável** — Ajuste o threshold de variação e cooldown entre scans
+
+### Monitor de Velocidade de Rede
+
+- **Upload e Download** — Monitora velocidade em tempo real
+- **Jitter** — Calcula variação de latência
+- **Janela flutuante** — Exibe informações sempre visíveis na tela
+- **Seleção de interface** — Escolha qual adaptador de rede monitorar
+
+### Estatísticas Detalhadas
+
+- **Latência mínima, máxima e média**
+- **Desvio padrão**
+- **Taxa de perda de pacotes**
+- **Total de pings realizados**
+- **Exportação para CSV e JSON**
+
+### Sistema de Alertas
+
+Receba notificações quando:
+
+- Latência ultrapassar um limite configurável
+- Ocorrerem falhas consecutivas de ping
+- Seu IP público mudar
+
+### Monitoramento de Rotas
+
+- **Detecção de mudanças de rota** — Alerta quando o caminho de rede muda
+- **Log de alterações** — Mantém histórico de mudanças de rota
+- **Visualizador de logs** — Interface para consultar logs
+
+### Scanner de Portas
+
+- **Scan rápido** — Verifica portas comuns no alvo atual
+- **Portas identificadas** — Mostra nome do serviço (HTTP, SSH, RDP, etc.)
+- **Seleção rápida** — Clique na porta para usar no ping TCP
+
+### Informações de Rede
+
+- **IP Privado (IPv4 e IPv6)**
+- **IP Público (IPv4 e IPv6)**
+- **Endereço MAC**
+- **Servidor DNS em uso**
+
+### Monitor de Área de Transferência
+
+- Detecta automaticamente quando você copia um endereço IP
+- Oferece opção de abrir janela de ping flutuante para o IP copiado
+
+### Janelas Flutuantes de Ping
+
+- Janelas always-on-top para monitorar múltiplos alvos
+- Auto-fechamento configurável (3s, 10s, 30s ou nunca)
+
+### Requisitos
+
+- Windows 10/11
+- .NET 9.0 Runtime
+
+## Como Usar
+
+1. Execute o `ISPing.exe`
+2. O ícone aparecerá na bandeja do sistema
+3. Clique com o **botão direito** para acessar o menu de opções
+4. Clique com o **botão esquerdo** para copiar a latência atual
+
+### Menu de Contexto
+
+| Opção | Descrição |
+|-------|-----------|
+| **Alvo do Ping** | Seleciona o destino do ping |
+| **Tipo de Ping** | Alterna entre ICMP e TCP |
+| **Escanear Portas** | Verifica portas abertas no alvo |
+| **Intervalo** | Define frequência do ping |
+| **Exibição do Ping** | Último ping ou média |
+| **Monitorar IPs na Área de Transferência** | Detecta IPs copiados |
+| **Monitorar Velocidade de Rede/Jitter** | Ativa monitor de velocidade |
+| **Logar/Monitorar Mudanças de Rota** | Ativa monitoramento de rotas |
+| **Latency Hound** | Configura detecção de variações |
+| **Ver Estatísticas** | Exibe estatísticas detalhadas |
+| **Configurar Alertas** | Define thresholds de alerta |
+| **Exportar Dados** | Salva dados em CSV ou JSON |
+
+---
+
+### Configurações Salvas
+
+- Alvo do ping
+- Intervalo entre pings
+- Tipo de ping (ICMP/TCP)
+- Porta TCP personalizada
+- Estado dos monitores
+- Configurações de alertas
+- Configurações do Latency Hound
+
+---
+
+## Logs
+
+Os logs são armazenados em:
+
+```
+%APPDATA%\ISPing\ISPingAppEvents.log    # Eventos da aplicação
+%APPDATA%\ISPing\ISPingRouteChanges.log # Mudanças de rota
+```
+
+---
+
+## Tecnologias Utilizadas
+
+- **C# / .NET 9.0**
+- **Windows Forms**
+- **System.Net.NetworkInformation** para ping ICMP
+- **System.Net.Sockets** para ping TCP
+- **PerformanceCounter** para monitoramento de velocidade
 
 
 
-  Iniciar com Windows:
+## Iniciar com Windows:
   
    Aperte Botão Windows + R
    
