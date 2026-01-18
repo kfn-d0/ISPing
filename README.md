@@ -143,7 +143,7 @@ Receba notificações quando:
 Os logs são armazenados em:
 
 ```
-%APPDATA%\ISPing\ISPingAppEvents.log    # Eventos da aplicação
+%APPDATA%\ISPing\ISPingAppEvents.log    # Eventos do Programa
 %APPDATA%\ISPing\ISPingRouteChanges.log # Mudanças de rota
 ```
 
