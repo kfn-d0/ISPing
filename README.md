@@ -1,14 +1,15 @@
-#  **ISPing – Monitoramento de Latência e Ferramentas para ISPs**
-
-![image](https://github.com/user-attachments/assets/b7b0bd79-9929-4ec0-8a35-65e68dc3d53d)
-
-![image](https://github.com/user-attachments/assets/49b464bd-1f87-4dff-82de-02e753e22488)
-
-
-
 # ISPing
 
-**Monitor de rede em tempo real para Windows** — Monitore latência, velocidade de rede, mudanças de IP e muito mais diretamente na bandeja do sistema.
+**Monitor de rede em tempo real para Windows** 
+
+Monitore latência, velocidade de rede, mudanças de IP e muito mais diretamente na bandeja do sistema.
+
+![Image](https://github.com/user-attachments/assets/b7b0bd79-9929-4ec0-8a35-65e68dc3d53d)
+![Image](https://github.com/user-attachments/assets/49b464bd-1f87-4dff-82de-02e753e22488)
+<img width="554" height="702" alt="image" src="https://github.com/user-attachments/assets/f1f321ad-a179-46d6-bf7c-76550c5e2333" />
+<img width="283" height="506" alt="image" src="https://github.com/user-attachments/assets/b32fc2da-35f1-4060-b42e-f07f3835783e" />
+
+
 
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
 ![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4?style=flat&logo=dotnet&logoColor=white)
@@ -18,153 +19,98 @@
 
 ## Visão Geral
 
-O **ISPing** é uma aplicação leve que reside na bandeja do sistema (system tray) do Windows e fornece monitoramento contínuo da sua conexão de rede. 
- 
-O ícone da bandeja exibe a latência atual em tempo real, com cores indicando a qualidade da conexão.
+O **ISPing** é uma aplicação leve e robusta que reside na bandeja do sistema (system tray) do Windows, fornecendo monitoramento contínuo da sua conexão de rede.
 
+O ícone da bandeja exibe a latência atual em tempo real, com cores indicando a qualidade da conexão, permitindo que você identifique instabilidades instantaneamente sem abrir janelas complexas.
 
 ---
 
 ## Funcionalidades
 
 ### Monitoramento de Ping
-
-- **Ping ICMP ou TCP** — Escolha entre ping ICMP tradicional ou TCP para alvos que bloqueiam ICMP
-- **Alvos pré-configurados** — Google (8.8.8.8), Cloudflare (1.1.1.1) ou endereço personalizado
-- **Intervalos configuráveis** — 1, 3 ou 10 segundos entre pings
-- **Exibição no ícone** — Mostra último ping ou média dos últimos 3 pings
+- **Ping ICMP ou TCP**: Escolha entre ping ICMP tradicional ou TCP para alvos que bloqueiam ICMP.
+- **Alvos pré-configurados**: Google (8.8.8.8), Cloudflare (1.1.1.1) ou endereço personalizado.
+- **Intervalos configuráveis**: 1, 3 ou 10 segundos entre pings.
+- **Exibição no ícone**: Mostra último ping ou média dos últimos 3 pings.
 
 ### Latency Hound
-
 Sistema inteligente de detecção de variações de latência:
-
-- **Detecção automática** — Monitora variações significativas na latência
-- **Tracert automático** — Executa traceroute quando detecta mudanças
-- **Histórico** — Armazena e exibe histórico de tracerts
-- **Configurável** — Ajuste o threshold de variação e cooldown entre scans
+- **Detecção automática**: Monitora variações significativas na latência.
+- **Tracert automático**: Executa traceroute quando detecta mudanças na rota.
+- **Histórico**: Armazena e exibe histórico de tracerts para análise.
+- **Configurável**: Ajuste o threshold de variação e cooldown entre scans.
 
 ### Monitor de Velocidade de Rede
-
-- **Upload e Download** — Monitora velocidade em tempo real
-- **Jitter** — Calcula variação de latência
-- **Janela flutuante** — Exibe informações sempre visíveis na tela
-- **Seleção de interface** — Escolha qual adaptador de rede monitorar
+- **Upload e Download**: Monitora velocidade em tempo real.
+- **Jitter**: Calcula variação de latência.
+- **Janela flutuante**: Exibe informações sempre visíveis na tela.
+- **Seleção de interface**: Escolha qual adaptador de rede monitorar.
 
 ### Estatísticas Detalhadas
-
-- **Latência mínima, máxima e média**
-- **Desvio padrão**
-- **Taxa de perda de pacotes**
-- **Total de pings realizados**
-- **Exportação para CSV e JSON**
+- Latência mínima, máxima e média.
+- Desvio padrão e Jitter.
+- Taxa de perda de pacotes.
+- Total de pings realizados.
+- **Exportação**: Salve dados em CSV e JSON.
 
 ### Sistema de Alertas
-
-Receba notificações quando:
-
-- Latência ultrapassar um limite configurável
-- Ocorrerem falhas consecutivas de ping
-- Seu IP público mudar
+Receba notificações visuais e sonoras quando:
+- Latência ultrapassar um limite configurável.
+- Ocorrerem falhas consecutivas de ping.
+- Seu IP público mudar.
 
 ### Monitoramento de Rotas
-
-- **Detecção de mudanças de rota** — Alerta quando o caminho de rede muda
-- **Log de alterações** — Mantém histórico de mudanças de rota
-- **Visualizador de logs** — Interface para consultar logs
+- **Detecção de mudanças de rota**: Alerta quando o caminho de rede muda.
+- **Log de alterações**: Mantém histórico de mudanças de rota.
+- **Visualizador de logs**: Interface para consultar logs passados.
 
 ### Scanner de Portas
-
-- **Scan rápido** — Verifica portas comuns no alvo atual
-- **Portas identificadas** — Mostra nome do serviço (HTTP, SSH, RDP, etc.)
-- **Seleção rápida** — Clique na porta para usar no ping TCP
+- **Scan rápido**: Verifica portas comuns (HTTP, SSH, RDP, etc.) no alvo atual.
+- **Seleção rápida**: Clique na porta identificada para usar no ping TCP.
 
 ### Informações de Rede
+- **IP Privado e Público** (Gateway, IPv4 e IPv6).
+- **Endereço MAC**.
+- **Servidor DNS** em uso (com sistema de cache interno).
+- **Monitor de Wi-Fi**: SSID, Força do Sinal (dBm), Canal, Frequência e Velocidade do Link.
+- **Portas abertas**: Identifica facilmente portas abertas em seu computador.
 
-- **IP Privado (IPv4 e IPv6)**
-- **IP Público (IPv4 e IPv6)**
-- **Endereço MAC**
-- **Servidor DNS em uso**
+### Ferramentas Úteis
+- **Monitor de Área de Transferência**: Detecta IPs copiados e sugere monitoramento imediato em janela flutuante.
+- **Janelas Flutuantes (Always-on-top)**: Monitore múltiplos alvos simultaneamente com auto-fechamento configurável (3s, 10s, 30s ou nunca).
 
-### Monitor de Área de Transferência
 
-- Detecta automaticamente quando você copia um endereço IP
-- Oferece opção de abrir janela de ping flutuante para o IP copiado
 
-### Janelas Flutuantes de Ping
+---
 
-- Janelas always-on-top para monitorar múltiplos alvos
-- Auto-fechamento configurável (3s, 10s, 30s ou nunca)
+## Instalação e Execução
 
 ### Requisitos
+*   Windows 10 (Não testado no Windows 11)
+*   [.NET 9.0 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (necessário para rodar).
 
-- Windows 10/11
-- .NET 9.0 Runtime
+### Iniciar com Windows de forma automática
+Para fazer o ISPing iniciar junto com o Windows:
 
-## Como Usar
+1.  Pressione `Windows + R` no teclado.
+2.  Digite `shell:startup` e pressione Enter.
+3.  Copie o arquivo `ISPing.exe` (ou crie um atalho para ele) e cole dentro da pasta que abriu.
 
-1. Execute o `ISPing.exe`
-2. O ícone aparecerá na bandeja do sistema
-3. Clique com o **botão direito** para acessar o menu de opções
-4. Clique com o **botão esquerdo** para copiar a latência atual
-
-### Menu de Contexto
-
-| Opção | Descrição |
-|-------|-----------|
-| **Alvo do Ping** | Seleciona o destino do ping |
-| **Tipo de Ping** | Alterna entre ICMP e TCP |
-| **Escanear Portas** | Verifica portas abertas no alvo |
-| **Intervalo** | Define frequência do ping |
-| **Exibição do Ping** | Último ping ou média |
-| **Monitorar IPs na Área de Transferência** | Detecta IPs copiados |
-| **Monitorar Velocidade de Rede/Jitter** | Ativa monitor de velocidade |
-| **Logar/Monitorar Mudanças de Rota** | Ativa monitoramento de rotas |
-| **Latency Hound** | Configura detecção de variações |
-| **Ver Estatísticas** | Exibe estatísticas detalhadas |
-| **Configurar Alertas** | Define thresholds de alerta |
-| **Exportar Dados** | Salva dados em CSV ou JSON |
 
 ---
 
-### Configurações Salvas
+## Logs e Configuração
 
-- Alvo do ping
-- Intervalo entre pings
-- Tipo de ping (ICMP/TCP)
-- Porta TCP personalizada
-- Estado dos monitores
-- Configurações de alertas
-- Configurações do Latency Hound
-
----
-
-## Logs
+As configurações ficam em `AppSettings.cs`.
 
 Os logs são armazenados em:
-
-```
-%APPDATA%\ISPing\ISPingAppEvents.log    # Eventos do Programa
-%APPDATA%\ISPing\ISPingRouteChanges.log # Mudanças de rota
+```bash
+%APPDATA%\ISPing\ISPingAppEvents.log    # Eventos Gerais do Programa
+%APPDATA%\ISPing\ISPingRouteChanges.log # Registro de Mudanças de Rota
 ```
 
 ---
 
-## Tecnologias Utilizadas
+## Licença
 
-- **C# / .NET 9.0**
-- **Windows Forms**
-- **System.Net.NetworkInformation** para ping ICMP
-- **System.Net.Sockets** para ping TCP
-- **PerformanceCounter** para monitoramento de velocidade
-
-
-
-## Iniciar com Windows:
-  
-   Aperte Botão Windows + R
-   
-   Escreva na caixa: shell:startup
-    
-   Cole o arquivo ISPing.exe
-
-![image](https://github.com/user-attachments/assets/ead2bdaa-9fc6-4d96-a8d2-927e04e8f2bb)
+Este projeto é disponibilizado sob a licença MIT. Sinta-se à livre para usar, modificar e distribuir.
