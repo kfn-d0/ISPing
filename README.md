@@ -7,6 +7,7 @@ Monitore latência, velocidade de rede, mudanças de IP e muito mais diretamente
 ![Image](https://github.com/user-attachments/assets/b7b0bd79-9929-4ec0-8a35-65e68dc3d53d)
 ![Image](https://github.com/user-attachments/assets/49b464bd-1f87-4dff-82de-02e753e22488)
 <img width="554" height="702" alt="image" src="https://github.com/user-attachments/assets/7fd78185-4e2c-4c1c-8892-7482e903cc4b" /> <img width="283" height="506" alt="image" src="https://github.com/user-attachments/assets/029b9e34-b841-4da6-b12b-8e14a24d0327" />
+<img width="355" height="110" alt="image" src="https://github.com/user-attachments/assets/5ec194a1-b98f-42f1-9518-ab59880d2dd6" />
 
 
 
@@ -116,6 +117,7 @@ Os logs são armazenados em:
 ## Licença
 
 Este projeto é disponibilizado sob a licença MIT. Sinta-se à livre para usar, modificar e distribuir.
+
 
 
 
