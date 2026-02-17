@@ -103,9 +103,7 @@ Para fazer o ISPing iniciar junto com o Windows:
 
 ---
 
-## Logs e Configuração
-
-As configurações são persistidas em `AppSettings.cs` entre as sessões.
+## Logs
 
 Os logs são armazenados em:
 ```bash
@@ -118,6 +116,7 @@ Os logs são armazenados em:
 ## Licença
 
 Este projeto é disponibilizado sob a licença MIT. Sinta-se à livre para usar, modificar e distribuir.
+
 
 
 
