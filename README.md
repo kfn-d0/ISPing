@@ -1,6 +1,8 @@
 # ISPing
 
-**Monitor de rede em tempo real para Windows** — Monitore latência, velocidade de rede, mudanças de IP e muito mais diretamente na bandeja do sistema.
+**Monitor de rede em tempo real para Windows** 
+
+Monitore latência, velocidade de rede, mudanças de IP e muito mais diretamente na bandeja do sistema.
 
 ![Image](https://github.com/user-attachments/assets/b7b0bd79-9929-4ec0-8a35-65e68dc3d53d)
 ![Image](https://github.com/user-attachments/assets/49b464bd-1f87-4dff-82de-02e753e22488)
@@ -145,3 +147,4 @@ Os logs são armazenados em:
 ## 📄 Licença
 
 Este projeto é disponibilizado sob a licença MIT. Sinta-se à livre para usar, modificar e distribuir.
+
